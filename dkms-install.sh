@@ -11,7 +11,10 @@ DRV_DIR="$(pwd)"
 DRV_NAME=r8125
 DRV_VERSION=9.012.04
 
-cp -r ${DRV_DIR} /usr/src/${DRV_NAME}-${DRV_VERSION}
+rsync -av --delete-after --delete-excluded \
+  --exclude=.git/ --exclude=debian/ --exclude=.gitignore --exclude='*.sh' \
+  --exclude-from=.gitignore \
+  ${DRV_DIR}/ /usr/src/${DRV_NAME}-${DRV_VERSION}/
 
 dkms add -m ${DRV_NAME} -v ${DRV_VERSION}
 dkms build -m ${DRV_NAME} -v ${DRV_VERSION}
