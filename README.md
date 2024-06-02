@@ -4,8 +4,6 @@
 
 This provides Realtek r8125 driver in DKMS way so that you can keep the latest driver even after the kernel upgrade.
 
-From **9.012.03** version, now it supports both **2.5 Gbits** and **5 Gbits** ethernet card by Realtek.
-
 ## Before use
 
 This DKMS package is for Realtek RTL8125 (r8125 in module name) Ethernet, which is designed for the PCI interface.
@@ -37,7 +35,7 @@ sudo dpkg -i realtek-r8125-dkms*.deb
 > If multiple files selected by the wild card, you should type the specific version of the file.
 >
 > ```bash
-> sudo dpkg -i realtek-r8125-dkms_9.012.04-1_amd64.deb
+> sudo dpkg -i realtek-r8125-dkms_9.013.02-2_amd64.deb
 > ```
 
 If dependency error occurs, try to fix that with `apt` command.
@@ -132,5 +130,5 @@ GPL-2 on Realtek driver and the debian packaing.
 
 ## References
 
-- [Realtek r8125 driver release page](https://www.realtek.com/en/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-pci-express-software)
+- [Realtek r8125 driver release page](https://www.realtek.com/Download/List?cate_id=584)
 - [ParrotSec's realtek-rtl88xxau-dkms, where got hint from](https://github.com/ParrotSec/realtek-rtl88xxau-dkms)

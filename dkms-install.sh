@@ -9,7 +9,7 @@ fi
 
 DRV_DIR="$(pwd)"
 DRV_NAME=r8125
-DRV_VERSION=9.012.04
+DRV_VERSION=9.013.02
 
 rsync -av --delete-after --delete-excluded \
   --exclude=.git/ --exclude=debian/ --exclude=.gitignore --exclude='*.sh' \
