@@ -22,7 +22,7 @@ function buildForExistsKernel() {
 
 DRV_DIR="$(pwd)"
 DRV_NAME=r8125
-DRV_VERSION=9.014.01
+DRV_VERSION=9.015.00
 DKMS_DIR=/var/lib/dkms
 
 set -e
