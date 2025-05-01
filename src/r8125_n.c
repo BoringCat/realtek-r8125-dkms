@@ -13990,11 +13990,6 @@ rtl8125_hw_phy_config(struct net_device *dev)
                 rtl8125_hw_fiber_phy_config(tp);
 #endif /* ENABLE_FIBER_SUPPORT */
 
-#ifdef ENABLE_FIBER_SUPPORT
-        if (HW_FIBER_MODE_ENABLED(tp))
-                rtl8125_hw_fiber_phy_config(tp);
-#endif /* ENABLE_FIBER_SUPPORT */
-
         /*ocp phy power saving*/
         /*
         if (aspm) {
@@ -14310,10 +14305,6 @@ rtl8125_init_software_variable(struct net_device *dev)
 
         tp->ShortPacketSwChecksum = TRUE;
         tp->UseSwPaddingShortPkt = TRUE;
-
-#ifdef ENABLE_FIBER_SUPPORT
-        rtl8125_check_fiber_mode_support(tp);
-#endif /* ENABLE_FIBER_SUPPORT */
 
 #ifdef ENABLE_FIBER_SUPPORT
         rtl8125_check_fiber_mode_support(tp);
