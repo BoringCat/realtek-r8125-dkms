@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ $EUID -ne 0 ]]; then
-  echo "You must run this with superuser priviliges.  Try \"sudo ./dkms-install.sh\"" 2>&1
+  echo "You must run this with superuser privileges.  Try \"sudo ./dkms-install.sh\"" 2>&1
   exit 1
 else
   echo "About to run dkms install steps..."
@@ -24,6 +24,8 @@ DRV_DIR="$(pwd)"
 DRV_NAME=r8125
 DRV_VERSION=9.015.00
 DKMS_DIR=/var/lib/dkms
+DRV_VERSION=9.016.01
+KERNEL_VERSION="${KERNEL_VERSION:-$(uname -r)}"
 
 set -e
 
